@@ -15,6 +15,7 @@ struct ContentView: View {
     //fetching the entities and adding a sorting
     @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)]) var todos: FetchedResults<Todo>
     
+    @State private var showSettingsView: Bool = false
     @State private var showingAddTodoView: Bool = false
     @State private var animatingButton: Bool = false
     
@@ -37,18 +38,20 @@ struct ContentView: View {
                     leading: EditButton(),
                     trailing:
                         Button(action: {
-                            self.showingAddTodoView.toggle()
+                            self.showSettingsView.toggle()
                         }){
-                            Image(systemName: "plus")
-                        }.sheet(isPresented: $showingAddTodoView, content: {
-                            AddTodoView().environment(\.managedObjectContext, self.managedObjectContext)
-                        })
+                            Image(systemName: "paintbrush")
+                                .imageScale(.large)
+                        }
                 )
                 // MARK: no todo items
                 if todos.count == 0 {
                     EmptyListView()
                 }
             }//: ZStack
+            .sheet(isPresented: $showSettingsView, content: {
+                SettingsView().environment(\.managedObjectContext, self.managedObjectContext)
+            })
             .sheet(isPresented: $showingAddTodoView, content: {
                 AddTodoView().environment(\.managedObjectContext, self.managedObjectContext)
             })
@@ -67,7 +70,7 @@ struct ContentView: View {
                             .scaleEffect(self.animatingButton ? 1 : 0)
                             .frame(width: 88, height: 88, alignment: .center)
                     }
-                    .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+                    .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true), value: animatingButton)
                     
                     Button(action: {
                             self.showingAddTodoView.toggle()
