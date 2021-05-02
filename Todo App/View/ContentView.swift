@@ -15,6 +15,8 @@ struct ContentView: View {
     //fetching the entities and adding a sorting
     @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)]) var todos: FetchedResults<Todo>
     
+    @EnvironmentObject var iconSettings: IconNames
+    
     @State private var showSettingsView: Bool = false
     @State private var showingAddTodoView: Bool = false
     @State private var animatingButton: Bool = false
@@ -50,7 +52,7 @@ struct ContentView: View {
                 }
             }//: ZStack
             .sheet(isPresented: $showSettingsView, content: {
-                SettingsView().environment(\.managedObjectContext, self.managedObjectContext)
+                SettingsView().environmentObject(self.iconSettings)
             })
             .sheet(isPresented: $showingAddTodoView, content: {
                 AddTodoView().environment(\.managedObjectContext, self.managedObjectContext)
