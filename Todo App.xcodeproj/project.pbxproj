@@ -16,6 +16,9 @@
 		BE335E7F263D775E00FA31FA /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = BE335E76263D775E00FA31FA /* Green.png */; };
 		BE335E80263D775E00FA31FA /* Blue Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = BE335E77263D775E00FA31FA /* Blue Dark.png */; };
 		BE335E81263D775E00FA31FA /* Pink Light.png in Resources */ = {isa = PBXBuildFile; fileRef = BE335E78263D775E00FA31FA /* Pink Light.png */; };
+		BE40F80B263E3F36000CD389 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40F80A263E3F36000CD389 /* ThemeModel.swift */; };
+		BE40F80D263E3F96000CD389 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40F80C263E3F96000CD389 /* ThemeData.swift */; };
+		BE40F80F263E401E000CD389 /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40F80E263E401E000CD389 /* ThemeSettings.swift */; };
 		BE4EC808263CC7E700CA2BF7 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4EC807263CC7E700CA2BF7 /* AddTodoView.swift */; };
 		BE4EC80A263CE98400CA2BF7 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4EC809263CE98400CA2BF7 /* EmptyListView.swift */; };
 		BE4EC80C263D110F00CA2BF7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4EC80B263D110F00CA2BF7 /* SettingsView.swift */; };
@@ -40,6 +43,9 @@
 		BE335E76263D775E00FA31FA /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
 		BE335E77263D775E00FA31FA /* Blue Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Dark.png"; sourceTree = "<group>"; };
 		BE335E78263D775E00FA31FA /* Pink Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Light.png"; sourceTree = "<group>"; };
+		BE40F80A263E3F36000CD389 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		BE40F80C263E3F96000CD389 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
+		BE40F80E263E401E000CD389 /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
 		BE4EC807263CC7E700CA2BF7 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		BE4EC809263CE98400CA2BF7 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		BE4EC80B263D110F00CA2BF7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -83,6 +89,16 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		BE40F809263E3EFC000CD389 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				BE40F80A263E3F36000CD389 /* ThemeModel.swift */,
+				BE40F80C263E3F96000CD389 /* ThemeData.swift */,
+				BE40F80E263E401E000CD389 /* ThemeSettings.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		BE4EC806263CC7BB00CA2BF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +131,7 @@
 		BEC37A98263AD1B10099E603 /* Todo App */ = {
 			isa = PBXGroup;
 			children = (
+				BE40F809263E3EFC000CD389 /* Theme */,
 				BE335E6F263D772D00FA31FA /* Icons */,
 				BE4EC806263CC7BB00CA2BF7 /* View */,
 				BEC37A99263AD1B10099E603 /* AppDelegate.swift */,
@@ -218,10 +235,13 @@
 				BE4EC80C263D110F00CA2BF7 /* SettingsView.swift in Sources */,
 				BE4EC80E263D223800CA2BF7 /* FormRowStaticView.swift in Sources */,
 				BE4EC810263D241F00CA2BF7 /* FormRowLinkView.swift in Sources */,
+				BE40F80D263E3F96000CD389 /* ThemeData.swift in Sources */,
 				BEC37A9A263AD1B10099E603 /* AppDelegate.swift in Sources */,
 				BEC37A9C263AD1B10099E603 /* SceneDelegate.swift in Sources */,
+				BE40F80F263E401E000CD389 /* ThemeSettings.swift in Sources */,
 				BE4EC80A263CE98400CA2BF7 /* EmptyListView.swift in Sources */,
 				BEC37A9E263AD1B10099E603 /* ContentView.swift in Sources */,
+				BE40F80B263E3F36000CD389 /* ThemeModel.swift in Sources */,
 				BEC37AA1263AD1B10099E603 /* Todo_App.xcdatamodeld in Sources */,
 				BE4EC808263CC7E700CA2BF7 /* AddTodoView.swift in Sources */,
 			);
